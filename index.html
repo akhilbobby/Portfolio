@@ -1,51 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
 </head>
-<body>
-    <header>
-        <h1>My Portfolio</h1>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome to my portfolio! I'm a web developer passionate about creating beautiful and functional websites.</p>
-    </section>
-    
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of Project 1</p>
-        </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of Project 2</p>
-        </div>
-        <!-- Add more projects as needed -->
-    </section>
-    
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>You can reach me at email@example.com</p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 My Portfolio</p>
-    </footer>
 
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Akhil Bobby</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Another nav for the hamburger menu -->
+    <nav id="hamburger-nav">
+        <div class="logo">Akhil Bobby</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/akhil_pic.jpg" alt="Akhil Bobby profile picture" />
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Akhil Bobby</h1>
+            <p class="section__text__p2">Product Designer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('.assets/')">Download CV </button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact </button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/linkedin.png" alt="My LinkedIn Profile" class="icon"
+                    onclick="location.href='https://www.linkedin.com/in/akhil-bobby/'" />
+                <img src="./assets/behance.png" alt="My Behance Profile" class="icon"
+                    onclick="location.href='https://www.behance.net/akhilbobby/'" />
+                <img src="./assets/github.png" alt="My Github Profile" class="icon"
+                    onclick="location.href='https://github.com/akhilbobby'" />
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1">Get to Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="./assets/akhil_pic.jpg" alt="Profile Picture" class="about-pic">
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./assets/experience.png" alt="Experience icon" class="icon">
+                        <h3>Experience</h3>
+                        <p>2+ years<br>Founder & Organizer, TEDxMVJCE<br><br>Marketing & Strategy, LeadSqaured Europe
+                        </p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./assets/education.png" alt="Education icon" class="icon">
+                        <h3>Education</h3>
+                        <p>Bachelors of Engineering <br>Computer Science</p>
+                    </div>
+
+                </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Tools</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience" class="icon">
+                            <div>
+                                <h3>Fusion 360</h3>
+                            </div>
+                            <img src="./assets/new-window.png" alt="new window" class="icon_new-window"
+                                onclick="window.open('https://www.linkedin.com/in/akhil-bobby/', '_blank')">
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience" class="icon">
+                            <div>
+                                <h3>Unity AR</h3>
+                            </div>
+                            <img src="./assets/new-window.png" alt="new window" class="icon_new-window"
+                                onclick="window.open('https://www.linkedin.com/in/akhil-bobby/', '_blank')">
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience" class="icon">
+                            <div>
+                                <h3>AWS Cloud</h3>
+                            </div>
+                            <img src="./assets/new-window.png" alt="new window" class="icon_new-window"
+                                onclick="window.open('https://www.linkedin.com/in/akhil-bobby/', '_blank')">
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience" class="icon">
+                            <div>
+                                <h3>Figma</h3>
+                            </div>
+                            <img src="./assets/new-window.png" alt="new window" class="icon_new-window"
+                                onclick="window.open('https://www.linkedin.com/in/akhil-bobby/', '_blank')">
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience" class="icon">
+                            <div>
+                                <h3>Blender</h3>
+                            </div>
+                            <img src="./assets/new-window.png" alt="new window" class="icon_new-window"
+                                onclick="window.open('https://www.linkedin.com/in/akhil-bobby/', '_blank')">
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience" class="icon">
+                            <div>
+                                <h3>Leadership</h3>
+                            </div>
+                            <img src="./assets/new-window.png" alt="new window" class="icon_new-window"
+                                onclick="window.open('https://www.linkedin.com/in/akhil-bobby/', '_blank')">
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+            <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'">
+    </section>
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title"> Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Tools</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience" class="icon">
+                            <div>
+                                <h3>Fusion 360</h3>
+                            </div>
+                            <img src="./assets/new-window.png" alt="new window" class="icon_new-window"
+                                onclick="window.open('https://www.linkedin.com/in/akhil-bobby/', '_blank')">
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience" class="icon">
+                            <div>
+                                <h3>Unity AR</h3>
+                            </div>
+                            <img src="./assets/new-window.png" alt="new window" class="icon_new-window"
+                                onclick="window.open('https://www.linkedin.com/in/akhil-bobby/', '_blank')">
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience" class="icon">
+                            <div>
+                                <h3>AWS Cloud</h3>
+                            </div>
+                            <img src="./assets/new-window.png" alt="new window" class="icon_new-window"
+                                onclick="window.open('https://www.linkedin.com/in/akhil-bobby/', '_blank')">
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience" class="icon">
+                            <div>
+                                <h3>Figma</h3>
+                            </div>
+                            <img src="./assets/new-window.png" alt="new window" class="icon_new-window"
+                                onclick="window.open('https://www.linkedin.com/in/akhil-bobby/', '_blank')">
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience" class="icon">
+                            <div>
+                                <h3>Blender</h3>
+                            </div>
+                            <img src="./assets/new-window.png" alt="new window" class="icon_new-window"
+                                onclick="window.open('https://www.linkedin.com/in/akhil-bobby/', '_blank')">
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience" class="icon">
+                            <div>
+                                <h3>Leadership</h3>
+                            </div>
+                            <img src="./assets/new-window.png" alt="new window" class="icon_new-window"
+                                onclick="window.open('https://www.linkedin.com/in/akhil-bobby/', '_blank')">
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="details-container color-container">
+                <div class="article-container">
+
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
+
 </html>
